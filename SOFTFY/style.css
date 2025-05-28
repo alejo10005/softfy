@@ -1,0 +1,272 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES DE COLOR */
+:root {
+  --bg-dark: #11151b;
+  --bg-panel: #2f343b;
+  --text-light: #cccfd5;
+  --accent: #79828c;
+  --btn-bg: #16191f;
+  --btn-hover: #252a31;
+  --input-bg: #23272c;
+  --input-border: #44494f;
+  --font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* GLOBAL */
+body {
+  background:#1F242A;
+  color: var(--text-light);
+  font-family: var(--font-family);
+  min-height: 100vh;
+}
+
+/* ===== 1. WELCOME PAGE ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+}
+
+header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header nav button {
+  background: var(--btn-bg);
+  border: none;
+  color: var(--text-light);
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+header nav button:hover {
+  background: var(--btn-hover);
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 2rem;
+}
+
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero p {
+  font-family: 'Advent Pro', sans-serif; 
+  font-size: 4rem;                         
+  font-weight: 4;                        
+  margin-bottom: 2rem;                     
+  color: var(--text-light);
+}
+
+
+.waveform {
+  position-area: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto ;
+  
+
+}
+
+.waveform img {
+ 
+  display: block;
+  width: 85%;
+  filter: brightness(0.7);
+}
+
+/* ===== 2. LOGIN PAGE ===== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  min-height: 80vh;
+}
+
+.login-box {
+  background: var(--bg-panel);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+.login-box .form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.login-box .form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.login-box .form-group input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  background: var(--input-bg);
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.login-box .form-group input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.login-box .form-group .checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 0.3rem;
+}
+
+.login-box .form-group .checkbox input {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 4px;
+  background: var(--btn-bg);
+  color: var(--text-light);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.login-box button:hover {
+  background: var(--btn-hover);
+}
+
+.login-box .alt-action {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.login-box .alt-action a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.login-box .alt-action a:hover {
+  text-decoration: underline;
+}
+/* ===== 3. HOME / DASHBOARD PAGE ===== */
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: var(--bg-panel);
+  padding: 1rem 1.5rem 1.5rem 1.5rem; /* menos espacio arriba */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar .logo {
+  font-size: 1.6rem;
+  margin-bottom: 1rem; /* antes: 1.5rem */
+}
+
+.sidebar input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  margin-bottom: 1rem;
+  background: var(--input-bg);
+  color: var(--text-light);
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* elimina separación extra si hay */
+}
+
+.sidebar nav li {
+  margin: 0.3rem 0; /* antes: 0.6rem 0 */
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+.sidebar nav li i {
+  margin-right: 0.5rem;
+}
+
+.sidebar nav li ul {
+  margin-left: 0.8rem; /* antes: 1.2rem */
+  font-size: 0.9rem;
+}
+
+.config {
+  margin-top: 1rem; /* antes: 2rem */
+  font-size: 0.9rem;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--btn-bg);
+  padding: 1rem 2rem;
+}
+
+.controls i,
+.profile i {
+  margin: 0 0.4rem;
+  font-size: 1.2rem;
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.home-section {
+  padding: 2rem;
+}
+
+.home-section h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.home-section p {
+  font-size: 1.2rem;
+  color: var(--accent);
+}
